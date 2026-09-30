@@ -11,7 +11,7 @@ Site da marca NADA MELHOR, com apresentação do DROP 1 e pedidos pelo WhatsApp 
 
 ## Visualizar e editar
 
-O projeto usa HTML e CSS estáticos, sem dependências ou etapa de compilação. Abra `dist/index.html` no navegador ou sirva a pasta `dist` com um servidor HTTP local. As fontes são carregadas pelo Google Fonts, com fontes alternativas disponíveis.
+O projeto usa HTML, CSS e JavaScript estáticos, sem etapa de compilação. Sirva a pasta `dist` com um servidor HTTP local (por exemplo, a extensão Live Server do VS Code). A visualização 3D usa módulos JavaScript e precisa de HTTP, não de abertura por `file://`. As fontes são carregadas pelo Google Fonts, com fontes alternativas disponíveis.
 
 Edite o HTML para atualizar textos, nomes das peças e links. Os pedidos são encaminhados para o WhatsApp público da marca, com mensagem preenchida; o visitante confirma o envio no aplicativo. Não há checkout, processamento de pagamentos ou armazenamento de pedidos no site.
 
@@ -21,4 +21,12 @@ Preços, tamanhos e disponibilidade estão sob consulta. As fotos e o logotipo v
 
 Versão inicial: https://nada-melhor-drop.fernando-bk77.chatgpt.site
 
-O site foi criado com acesso privado para revisão. Enviar alterações a este repositório do GitHub não atualiza automaticamente a hospedagem no Sites.
+GitHub Pages: https://fernando-srs.github.io/nada-melhor/
+
+O workflow `.github/workflows/pages.yml` publica somente a pasta `dist` a cada push na branch `main`. Em Settings → Pages, a origem deve ser GitHub Actions. O README e os arquivos de configuração ficam fora do conteúdo publicado. A hospedagem original no Sites continua separada e não é atualizada pelo workflow do GitHub.
+
+## Visualização 3D
+
+Os botões Ver em 3D abrem uma janela na própria página, com giro, zoom, pinça e vistas de frente e costas. A reconstrução usa superfícies de tecido e as fotografias do DROP 1 como textura para as estampas. Não é um escaneamento nem um molde industrial: proporções, caimento e cores são aproximados. O carregamento do Three.js é feito somente quando o visitante abre o visualizador.
+
+`dist/vendor/three.module.min.js` contém Three.js 0.170.0; a licença MIT está em `dist/vendor/THREE-LICENSE.txt`.
