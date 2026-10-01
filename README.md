@@ -2,6 +2,10 @@
 
 Site da marca NADA MELHOR, com apresentação do DROP 1 e pedidos pelo WhatsApp e Instagram.
 
+## Documentação
+
+Consulte o [guia completo do projeto](docs/DOCUMENTACAO.md) para editar a página, testar localmente, entender o carrossel e o 3D, publicar e solucionar problemas.
+
 ## Estrutura
 
 - `dist/index.html`: conteúdo e links de atendimento.
